@@ -1,0 +1,31 @@
+---
+date: 03-06-2024
+date-modified: last-modified
+date-format: "ddd D MMM YYYY"
+author:
+  - name: Roger MARTIN
+    email: Roger57que@free.fr
+  - name: Jenny BRYAN
+    url: https://jennybc.github.io/purrr-tutorial/index.html
+---
+
+## À propos de ce document {.unnumbered}
+
+### `purrr` ?
+
+`purrr` est une extension de [`R`](https://www.r-project.org/) [voir aussi @frwiki:R]  , incluse dans l'extension `tidyverse`
+
+Ce doment est un *pense-bête* prévu pour mon usage. L'original est l'œuvre de [Jenny BRYAN](https://jennybc.github.io/purrr-tutorial/index.html) [voir aussi @enwiki:jenny]et c'est grâce à ce document que j'ai^[enfin] réussi à me servir de `purrr`^[pour les personnes peu au fait de la langue de Rocky BALBOA, *to purr* veut dire ronronner]. 
+
+### Petite histoire de `purrr`
+
+`purrr` fait partie du [`tidyverse`](https://www.tidyverse.org/), créé par [Hadley WICKHAM](https://hadley.nz/)[voir aussi @frwiki:hadley]. 
+
+### Utilité 
+
+>`purrr` est une extension du tidyverse qui fournit des outils pour travailler avec les vecteurs et les fonctions, et notamment pour itérer sur les éléments de vecteurs ou de listes en leur appliquant une fonction^[copié/collé [d'ici](https://juba.github.io/tidyverse/18-purrr.html)].
+
+
+
+
+

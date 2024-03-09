@@ -1,0 +1,17 @@
+{
+  "hash": "072e01820ada53fa291a588830823e86",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ndate: 03-06-2024\ndate-modified: last-modified\ndate-format: \"ddd D MMM YYYY\"\nauthor:\n  - name: Roger MARTIN\n    email: Roger57que@free.fr\n  - name: Jenny BRYAN\n    url: https://jennybc.github.io/purrr-tutorial/bk00_vectors-and-lists.html\n---\n\n\n## Vecteurs et listes\n\n### Vecteurs atomiques\nIl faut comprendre les listes comme une structure de données qui généralise les vecteurs atomiques. Il faut donc vraiment commencer par là.\n\nL'objet `R` de base est un vecteur atomique comme celui-ci :\n\n\n::: {.cell}\n\n````{.cell-code}\n```{{r}}\nv_log <- c(TRUE, FALSE, FALSE, TRUE)\nv_log\n```\n````\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1]  TRUE FALSE FALSE  TRUE\n```\n\n\n:::\n:::\n\n\n::: {.callout-note}\n`R` ne comprend ***QUE*** des vecteurs. Le code ci-dessus affecte à une variable appelée `v_log` un vecteur de $4$ éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)\n:::\n\n\n\n\n\n\n\n\n",
+    "supporting": [
+      "101-vecteurs-et-listes_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

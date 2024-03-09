@@ -1,0 +1,64 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "purrr FR",
+    "section": "",
+    "text": "À propos de ce document",
+    "crumbs": [
+      "À propos de ce document"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\nKnuth, Donald E. 1984. « Literate Programming ». Comput. J. 27 (2): 97‑111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Annexe A — References",
+    "section": "",
+    "text": "Wikipedia contributors. 2023. “Jenny Bryan —\nWikipedia, the Free Encyclopedia.” https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&oldid=1186715571.\n\n\nWikipédia. 2024a. “Hadley Wickham — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&oldid=212491841.\n\n\n———. 2024b. “R (Langage) — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=213114905.",
+    "crumbs": [
+      "Annexes",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#à-propos-de-ce-document",
+    "href": "index.html#à-propos-de-ce-document",
+    "title": "purrr FR",
+    "section": "",
+    "text": "purrr ?\npurrr est une extension de R (voir aussi Wikipédia 2024b) , incluse dans l’extension tidyverse\n\n———. 2024b. « R (langage) — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=213114905.\n\nWikipedia contributors. 2023. « Jenny Bryan — Wikipedia, The Free Encyclopedia ». https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&oldid=1186715571.\n1 enfin2 pour les personnes peu au fait de la langue de Rocky BALBOA, to purr veut dire ronronnerCe doment est un pense-bête prévu pour mon usage. L’original est l’œuvre de Jenny BRYAN (voir aussi Wikipedia contributors 2023)et c’est grâce à ce document que j’ai1 réussi à me servir de purrr2.\n\n\nPetite histoire de purrr\npurrr fait partie du tidyverse, créé par Hadley WICKHAM(voir aussi Wikipédia 2024a).\n\nWikipédia. 2024a. « Hadley Wickham — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&oldid=212491841.\n\n\nUtilité\n\npurrr est une extension du tidyverse qui fournit des outils pour travailler avec les vecteurs et les fonctions, et notamment pour itérer sur les éléments de vecteurs ou de listes en leur appliquant une fonction3.\n3 copié/collé d’ici",
+    "crumbs": [
+      "À propos de ce document"
+    ]
+  },
+  {
+    "objectID": "101-vecteurs-et-listes.html",
+    "href": "101-vecteurs-et-listes.html",
+    "title": "1  Vecteurs et listes",
+    "section": "",
+    "text": "1.0.1 Vecteurs atomiques\nIl faut comprendre les listes comme une structure de données qui généralise les vecteurs atomiques. Il faut donc vraiment commencer par là.\nL’objet R de base est un vecteur atomique comme celui-ci :\n\n```{r}\nv_log &lt;- c(TRUE, FALSE, FALSE, TRUE)\nv_log\n```\n\n[1]  TRUE FALSE FALSE  TRUE\n\n\n\n\n\n\n\n\nNote\n\n\n\nR ne comprend QUE des vecteurs. Le code ci-dessus affecte à une variable appelée v_log un vecteur de \\(4\\) éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)",
+    "crumbs": [
+      "Notions de base",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Vecteurs et listes</span>"
+    ]
+  }
+]
