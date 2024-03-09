@@ -1,0 +1,81 @@
+---
+date: 03-09-2024
+date-modified: last-modified
+date-format: "ddd D MMM YYYY"
+author:
+  - name: Roger MARTIN
+    email: Roger57que@free.fr
+  - name: Jenny BRYAN
+    url: https://jennybc.github.io/purrr-tutorial/index.html
+  - name: Gemini
+    url: https://gemini.google.com/app/9e7b45c9610306f3
+---
+
+## Définition d'un chunk dans RStudio avec Quarto
+
+Un chunk, ou bloc de code, est une section de code R insérée dans un document Quarto. Il permet d'exécuter du code R et d'intégrer les résultats dans le document final.
+
+**Structure d'un chunk:**
+
+```
+```{r}
+
+# Code R
+
+```
+```
+
+**Éléments clés:**
+
+* **Début et fin du chunk:** délimités par trois tirets consécutifs (`````) et le langage du chunk (`r` pour R).
+* **Code R:** insérez votre code R entre les deux blocs de tirets.
+* **Options du chunk:** définies sur la ligne suivant le début du chunk, entre accolades (`{ }`).
+
+**Exemple de chunk:**
+
+```
+```{r}
+
+# Charger la bibliothèque ggplot2
+library(ggplot2)
+
+# Créer un graphique
+ggplot(airquality, aes(Temp, Ozone)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+```
+```
+
+**Fonctionnalités des chunks:**
+
+* **Exécution du code:** 
+    * Cliquez sur le bouton "Run" dans la barre d'outils du chunk.
+    * Utilisez le raccourci clavier `Ctrl` + `Enter`.
+* **Affichage des résultats:** 
+    * Graphiques, tableaux, texte brut, etc.
+    * Insertion automatique dans le document final.
+* **Options avancées:** 
+    * Contrôler l'exécution du code, l'affichage des résultats, etc.
+    * Pour plus d'informations, consultez la documentation Quarto (https://quarto.org/).
+
+**Utilisations des chunks:**
+
+* **Analyser des données:** 
+    * Charger des données, les transformer et les visualiser.
+    * Générer des statistiques et des modèles.
+* **Créer des rapports:** 
+    * Intégrer du code R et ses résultats dans un document.
+    * Automatiser la génération de rapports.
+* **Reproduire des analyses:** 
+    * Garantir la transparence et la reproductibilité des analyses.
+    * Partager facilement le code et les résultats.
+
+**En résumé, les chunks constituent un outil puissant pour combiner du code R et du texte dans des documents Quarto. Ils permettent d'exécuter du code R, d'intégrer ses résultats et de générer des documents dynamiques et interactifs.**
+
+**Ressources supplémentaires:**
+
+* https://quarto.org/: https://quarto.org/docs/computations/r.html
+* https://quarto.org/docs/tools/rstudio.html: https://rstudio.com/products/quarto/
+* https://quarto.org/docs/get-started/hello/rstudio.html: https://quarto.org/docs/get-started/quarto-rstudio.html
+

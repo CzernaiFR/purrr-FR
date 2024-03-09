@@ -1,5 +1,6 @@
 project:
   type: book
+  execute-dir: project
   output-dir: docs
   
   
@@ -7,7 +8,7 @@ project:
 book:
   title: "purrr FR"
   page-footer: "Merci à [Git](https://git-scm.com/), [github](https://github.com/), [Python](https://www.python.org/), [quarto](https://quarto.org/), [RStudio](https://posit.co/download/rstudio-desktop/), [R](https://cran.rstudio.com/) et [Wikipédia](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal)"
-  
+
   author:
     - name: Roger MARTIN
       email: Roger57que@free.fr
@@ -22,7 +23,9 @@ book:
         - 101-vecteurs-et-listes.qmd
     - intro.qmd
     - summary.qmd
-    
+    - part: /Aides/Aides.qmd
+      chapters: 
+        - /Aides/chunk.qmd
   appendices: 
     - references.qmd
     
@@ -58,8 +61,6 @@ format:
       margin-width: 320px
       gutter-width: 1rem
     
-  pdf:
-    documentclass: scrreprt
 
 
 

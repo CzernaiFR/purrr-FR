@@ -9,9 +9,9 @@ author:
     url: https://jennybc.github.io/purrr-tutorial/bk00_vectors-and-lists.html
 ---
 
-## Vecteurs et listes
+# Vecteurs et listes
 
-### Vecteurs atomiques
+## Vecteurs atomiques
 Il faut comprendre les listes comme une structure de données qui généralise les vecteurs atomiques. Il faut donc vraiment commencer par là.
 
 L'objet `R` de base est un vecteur atomique comme celui-ci :
@@ -25,6 +25,11 @@ v_log
 `R` ne comprend ***QUE*** des vecteurs. Le code ci-dessus affecte à une variable appelée `v_log` un vecteur de $4$ éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)
 :::
 
+D'autres vecteurs atomiques :
+```{r}
+# vecteur de 4 nombres entiers
+(v_int <- 1:4)
+```
 
 
 
