@@ -23,13 +23,16 @@ book:
         - 101-vecteurs-et-listes.qmd
     - intro.qmd
     - summary.qmd
-    - part: "Aides"
-      chapters: 
-        - "Aides/chunk.qmd"
+    
   appendices: 
     - references.qmd
-    
+    - part: "Aides"
+      chapters: 
+        - "Aides/Aides.qmd"
+        - "Aides/chunk.qmd"
+        - "Aides/vecteurs-en-R.qmd"
   sidebar: 
+    style: floating
     tools: 
       - icon: github
         menu: 
@@ -57,9 +60,9 @@ format:
     citeproc: true
     grid: 
       sidebar-width: 200px
-      body-width: 780px
+      body-width: 800px
       margin-width: 320px
-      gutter-width: 1rem
+      gutter-width: 0.5rem
     
 
 

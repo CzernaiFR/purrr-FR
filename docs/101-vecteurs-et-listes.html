@@ -56,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -137,7 +157,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -226,7 +246,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Aides</span></a>
+ <span class="menu-text">Annexes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -234,27 +254,39 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aides/chunk.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Définition d’un chunk dans RStudio avec Quarto</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Annexes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Aides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aides/Aides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Aides</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aides/chunk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title"><code>chunk</code> définition</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aides/vecteurs-en-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Vecteurs en <code>R</code></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -272,7 +304,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./101-vecteurs-et-listes.html">Notions de base</a></li><li class="breadcrumb-item"><a href="./101-vecteurs-et-listes.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vecteurs et listes</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -301,7 +333,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modifié</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">sam. 9 mars 2024</p>
+      <p class="date-modified">dim. 10 mars 2024</p>
     </div>
   </div>
     
@@ -312,9 +344,9 @@ window.Quarto = {
 </header>
 
 
-<section id="vecteurs-atomiques" class="level2" data-number="1.1">
+<section id="vecteurs-atomiques" class="level2 page-columns page-full" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="vecteurs-atomiques"><span class="header-section-number">1.1</span> Vecteurs atomiques</h2>
-<p>Il faut comprendre les listes comme une structure de données qui généralise les vecteurs atomiques. Il faut donc vraiment commencer par là.</p>
+<p>Il faut savoir que les listes sont des structures de données qui généralisent les vecteurs atomiques. Il faut donc vraiment commencer par là.</p>
 <p>L’objet <code>R</code> de base est un vecteur atomique comme celui-ci&nbsp;:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -335,10 +367,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>R</code> ne comprend <strong><em>QUE</em></strong> des vecteurs. Le code ci-dessus affecte à une variable appelée <code>v_log</code> un vecteur de <span class="math inline">\(4\)</span> éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)</p>
+<p><code>R</code> ne comprend <strong><em>QUE</em></strong> des vecteurs. Le code ci-dessus affecte à une variable appelée <code>v_log</code> un vecteur de <span class="math inline">\(4\)</span> éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)<span class="citation" data-cites="frwiki:vecteur">(voir <a href="references.html#ref-frwiki:vecteur" role="doc-biblioref">Wikipédia 2023</a>)</span></p>
+<p><a href="./Aides/vecteurs-en-R.html">Un point sur les vecteurs.</a></p>
 </div>
 </div>
-<p>D’autres vecteurs atomiques&nbsp;:</p>
+<div class="no-row-height column-margin column-container"><div id="ref-frwiki:vecteur" class="csl-entry" role="listitem">
+Wikipédia. 2023. <span>«&nbsp;Structure de données — Wikipédia<span>,</span> l’encyclopédie libre&nbsp;»</span>. <a href="http://fr.wikipedia.org/w/index.php?title=Structure_de_donn%C3%A9es&amp;oldid=200590572">http://fr.wikipedia.org/w/index.php?title=Structure_de_donn%C3%A9es&amp;oldid=200590572</a>.
+</div></div><p>D’autres vecteurs atomiques&nbsp;:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in"># vecteur de 4 nombres entiers</span></span>
@@ -348,6 +383,33 @@ Note
 <pre><code>[1] 1 2 3 4</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in"># vecteur de 4 nombres rationnels</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">(v_rat &lt;- 1:4 * 1.25)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.25 2.50 3.75 5.00</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in"># vecteur de 4 caractères</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">(v_car &lt;- letters[1:4])</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "b" "c" "d"</code></pre>
+</div>
+</div>
+<p>Les vecteurs atomiques sont homogènes. Chaque élément est du même type, et est un scalaire, c’est à dire « a&nbsp;une longueur un&nbsp;». Les exemples ci-dessus couvrent les versions les plus courantes des vecteurs <code>R</code> (logique, entier, double, caractère), même si vous en rencontrerez éventuellement des plus exotiques.</p>
+<p>Vous pouvez construire un vecteur « à la main » avec la c()fonction. Nous l’avons utilisé ci-dessus pour construire le vecteur logique. Tous les autres vecteurs sont apparus par d’autres moyens et cela est révélateur de la vie réelle : la plupart des vecteurs ne sont pas créés explicitement avec c(). Ils ont tendance à être créés avec un générateur, comme le 1:nraccourci, ou via la transformation d’un objet existant.</p>
+<p>« Indexer un vecteur » signifie adresser des éléments ou des atomes spécifiques, que ce soit pour la lecture ou l’écriture. Nous indexons un vecteur à l’aide de crochets, comme ceci : x[something]. Il existe plusieurs manières d’exprimer les éléments souhaités, c’est-à-dire qu’il existe plusieurs formes valables pour something&nbsp;:</p>
+<p>vecteur logique : conserver les éléments de xpour lesquels somethingc’est TRUEet supprimer ceux pour lesquels c’estFALSE</p>
+<p>v_char[c(FALSE, FALSE, TRUE, TRUE)] #&gt; [1] “c” “d” v_char[v_log] #&gt; [1] “a” “d” vecteur entier, tous positifs : les éléments spécifiés dans somethingsont conservés entiers négatifs, tous négatifs : les éléments spécifiés dans somethingsont supprimés</p>
+<p>v_doub[2:3] #&gt; [1] 2.4 3.6 v_char[-4] #&gt; [1] “a” “b” “c” vecteur de caractères : suppose qu’il xs’agit d’un vecteur nommé et que les éléments dont les noms sont spécifiés ne somethingsont pas affichés ici, car aucun de nos vecteurs n’est nommé</p>
+<p>Des exercices Que se passe-t-il lorsque vous demandez le zéro-ème élément de l’un de nos vecteurs ? Que se passe-t-il lorsque vous demandez un élément qui dépasse la fin du vecteur, c’est-à-dire x[k]lorsque la longueur de xest inférieure à k? Nous avons indexé un vecteur xavec un vecteur d’entiers positifs plus court que x. Que se passe-t-il si le vecteur d’indexation est plus long que x? Nous avons indexé xavec un vecteur logique de même longueur. Que se passe-t-il si le vecteur d’indexation est plus court que x? Faites les exercices et vous verrez qu’il est possible d’obtenir un vecteur atomique de longueur nulle et aussi d’obtenir des éléments qui le sont NA. Notez que, dans ces deux scénarios, le type de variable sous-jacent est conservé.</p>
+<p>v_int[0] #&gt; integer(0) typeof(v_int[0]) #&gt; [1] “integer” v_doub[100] #&gt; [1] NA typeof(v_doub[100]) #&gt; [1] “double” Oui, il existe différentes saveurs de NA!</p>
+
 
 
 </section>

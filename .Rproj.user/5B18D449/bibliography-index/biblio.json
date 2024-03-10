@@ -1,4 +1,102 @@
 {
-    "sources": [],
-    "project_biblios": []
+    "sources": [
+        {
+            "URL": "http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=213114905",
+            "author": [
+                {
+                    "family": "Wikipédia"
+                }
+            ],
+            "id": "frwiki:R",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "[En ligne; Page disponible le 6-mars-2024]",
+            "title": "R (langage) — wikipédia, l’encyclopédie libre",
+            "type": ""
+        },
+        {
+            "URL": "http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&oldid=212491841",
+            "author": [
+                {
+                    "family": "Wikipédia"
+                }
+            ],
+            "id": "frwiki:hadley",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "[En ligne; Page disponible le 15-février-2024]",
+            "title": "Hadley wickham — wikipédia, l’encyclopédie libre",
+            "type": ""
+        },
+        {
+            "URL": "https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&oldid=1186715571",
+            "author": [
+                {
+                    "literal": "Wikipedia contributors"
+                }
+            ],
+            "id": "enwiki:jenny",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "[Online; accessed 8-March-2024]",
+            "title": "Jenny bryan — Wikipedia, the free encyclopedia",
+            "type": ""
+        },
+        {
+            "URL": "http://fr.wikipedia.org/w/index.php?title=Google_Gemini&oldid=213073437",
+            "author": [
+                {
+                    "family": "Wikipédia"
+                }
+            ],
+            "id": "frwiki:gemini",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "[En ligne; Page disponible le 5-mars-2024]",
+            "title": "Google gemini — wikipédia, l’encyclopédie libre",
+            "type": ""
+        },
+        {
+            "URL": "http://fr.wikipedia.org/w/index.php?title=Structure_de_donn%C3%A9es&oldid=200590572",
+            "author": [
+                {
+                    "family": "Wikipédia"
+                }
+            ],
+            "id": "frwiki:vecteur",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "[En ligne; Page disponible le 19-janvier-2023]",
+            "title": "Structure de données — wikipédia, l’encyclopédie libre",
+            "type": ""
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
 }

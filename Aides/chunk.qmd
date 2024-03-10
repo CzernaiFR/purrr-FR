@@ -9,13 +9,13 @@ author:
     url: https://jennybc.github.io/purrr-tutorial/index.html
   - name: Gemini
     url: https://gemini.google.com/app/9e7b45c9610306f3
+title: "`chunk` définition"
 ---
 
-## Définition d'un chunk dans RStudio avec Quarto
 
 Un chunk, ou bloc de code, est une section de code R insérée dans un document Quarto. Il permet d'exécuter du code R et d'intégrer les résultats dans le document final.
 
-### Structure d'un chunk
+## Structure d'un chunk
 
 ```{r}
 
@@ -23,7 +23,7 @@ Un chunk, ou bloc de code, est une section de code R insérée dans un document 
 
 ```
 
-### Éléments clés
+## Éléments clés
 
 Début et fin du chunk
 :   délimités par trois tirets consécutifs (```` ```) et le langage du chunk (r ```` `pour R).`
@@ -34,7 +34,7 @@ Code R
 Options du chunk
 : définies sur la ligne suivant le début du chunk, entre accolades (`\`).
 
-### Exemple de chunk
+## Exemple de chunk
 
 ```{r}
 # Charger la bibliothèque ggplot2
@@ -46,7 +46,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
   geom_smooth(method = "loess")
 ```
 
-### Fonctionnalités des chunks
+## Fonctionnalités des chunks
 
 - Exécution du code :
     -   Cliquez sur le bouton "Run" dans la barre d'outils du chunk.
@@ -58,7 +58,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
     -   Contrôler l'exécution du code, l'affichage des résultats, etc.
     -   Pour plus d'informations, consultez la documentation Quarto (https://quarto.org/).
 
-### Utilisations des chunks
+## Utilisations des chunks
 
 - Analyser des données :
     -   Charger des données, les transformer et les visualiser.

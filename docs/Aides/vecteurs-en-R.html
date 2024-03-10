@@ -8,8 +8,9 @@
 
 <meta name="author" content="Roger MARTIN">
 <meta name="author" content="Jenny BRYAN">
+<meta name="author" content="Gemini">
 
-<title>purrr FR</title>
+<title>purrr FR - Annexe D — Vecteurs en R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,46 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./101-vecteurs-et-listes.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Aides/chunk.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -90,6 +71,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -102,7 +112,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">À propos de ce document</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references.html">Annexes</a></li><li class="breadcrumb-item"><a href="../Aides/Aides.html">Aides</a></li><li class="breadcrumb-item"><a href="../Aides/vecteurs-en-R.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Vecteurs en <code>R</code></span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -117,7 +127,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">purrr FR</a> 
+      <a href="../">purrr FR</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
@@ -146,7 +156,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">À propos de ce document</span></a>
   </div>
 </li>
@@ -161,7 +171,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./101-vecteurs-et-listes.html" class="sidebar-item-text sidebar-link">
+  <a href="../101-vecteurs-et-listes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vecteurs et listes</span></span></a>
   </div>
 </li>
@@ -169,13 +179,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
@@ -190,34 +200,34 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Aides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aides/Aides.html" class="sidebar-item-text sidebar-link">
+  <a href="../Aides/Aides.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Aides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aides/chunk.html" class="sidebar-item-text sidebar-link">
+  <a href="../Aides/chunk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title"><code>chunk</code> définition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aides/vecteurs-en-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../Aides/vecteurs-en-R.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Vecteurs en <code>R</code></span></span></a>
   </div>
 </li>
@@ -235,21 +245,19 @@ div.csl-indent {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#à-propos-de-ce-document" id="toc-à-propos-de-ce-document" class="nav-link active" data-scroll-target="#à-propos-de-ce-document">À propos de ce document</a>
-  <ul class="collapse">
-  <li><a href="#purrr" id="toc-purrr" class="nav-link" data-scroll-target="#purrr"><code>purrr</code> ?</a></li>
-  <li><a href="#petite-histoire-de-purrr" id="toc-petite-histoire-de-purrr" class="nav-link" data-scroll-target="#petite-histoire-de-purrr">Petite histoire de <code>purrr</code></a></li>
-  <li><a href="#utilité" id="toc-utilité" class="nav-link" data-scroll-target="#utilité">Utilité</a></li>
-  </ul></li>
+  <li><a href="#définition-dun-vecteur-en-r" id="toc-définition-dun-vecteur-en-r" class="nav-link active" data-scroll-target="#définition-dun-vecteur-en-r"><span class="header-section-number">D.1</span> Définition d’un vecteur en <code>R</code></a></li>
+  <li><a href="#exemples-de-vecteurs" id="toc-exemples-de-vecteurs" class="nav-link" data-scroll-target="#exemples-de-vecteurs"><span class="header-section-number">D.2</span> Exemples de vecteurs :</a></li>
+  <li><a href="#fonctions-utiles-pour-manipuler-les-vecteurs" id="toc-fonctions-utiles-pour-manipuler-les-vecteurs" class="nav-link" data-scroll-target="#fonctions-utiles-pour-manipuler-les-vecteurs"><span class="header-section-number">D.3</span> Fonctions utiles pour manipuler les vecteurs :</a></li>
+  <li><a href="#pour-plus-dinformations" id="toc-pour-plus-dinformations" class="nav-link" data-scroll-target="#pour-plus-dinformations"><span class="header-section-number">D.4</span> Pour plus d’informations :</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references.html">Annexes</a></li><li class="breadcrumb-item"><a href="../Aides/Aides.html">Aides</a></li><li class="breadcrumb-item"><a href="../Aides/vecteurs-en-R.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Vecteurs en <code>R</code></span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">purrr FR</h1>
+<h1 class="title">Annexe D — Vecteurs en <code>R</code></h1>
 </div>
 
 
@@ -261,20 +269,21 @@ div.csl-indent {
     <div class="quarto-title-meta-contents">
              <p>Roger MARTIN <a href="mailto:Roger57que@free.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
              <p><a href="https://jennybc.github.io/purrr-tutorial/index.html">Jenny BRYAN</a> </p>
+             <p><a href="https://gemini.google.com/app/9e7b45c9610306f3">Gemini</a> </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">mer. 6 mars 2024</p>
+      <p class="date">sam. 9 mars 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modifié</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">sam. 9 mars 2024</p>
+      <p class="date-modified">dim. 10 mars 2024</p>
     </div>
   </div>
     
@@ -285,32 +294,44 @@ div.csl-indent {
 </header>
 
 
-<section id="à-propos-de-ce-document" class="level2 unnumbered page-columns page-full">
-<h2 class="unnumbered anchored" data-anchor-id="à-propos-de-ce-document">À propos de ce document</h2>
-<section id="purrr" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="purrr"><code>purrr</code> ?</h3>
-<p><code>purrr</code> est une extension de <a href="https://www.r-project.org/"><code>R</code></a> <span class="citation" data-cites="frwiki:R">(voir aussi <a href="references.html#ref-frwiki:R" role="doc-biblioref">Wikipédia 2024b</a>)</span> , incluse dans l’extension <code>tidyverse</code></p>
-<div class="no-row-height column-margin column-container"><div id="ref-frwiki:R" class="csl-entry" role="listitem">
-———. 2024b. <span>«&nbsp;R (langage) — Wikipédia<span>,</span> l’encyclopédie libre&nbsp;»</span>. <a href="http://fr.wikipedia.org/w/index.php?title=R_(langage)&amp;oldid=213114905">http://fr.wikipedia.org/w/index.php?title=R_(langage)&amp;oldid=213114905</a>.
-</div><div id="ref-enwiki:jenny" class="csl-entry" role="listitem">
-Wikipedia contributors. 2023. <span>«&nbsp;Jenny Bryan — <span>Wikipedia</span><span>,</span> The Free Encyclopedia&nbsp;»</span>. <a href="https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&amp;oldid=1186715571">https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&amp;oldid=1186715571</a>.
-</div><p><sup>1</sup>&nbsp;enfin</p><p><sup>2</sup>&nbsp;pour les personnes peu au fait de la langue de Rocky BALBOA, <em>to purr</em> veut dire ronronner</p></div><p>Ce doment est un <em>pense-bête</em> prévu pour mon usage. L’original est l’œuvre de <a href="https://jennybc.github.io/purrr-tutorial/index.html">Jenny BRYAN</a> <span class="citation" data-cites="enwiki:jenny">(voir aussi <a href="references.html#ref-enwiki:jenny" role="doc-biblioref">Wikipedia contributors 2023</a>)</span>et c’est grâce à ce document que j’ai<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> réussi à me servir de <code>purrr</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<section id="définition-dun-vecteur-en-r" class="level2 page-columns page-full" data-number="D.1">
+<h2 data-number="D.1" class="anchored" data-anchor-id="définition-dun-vecteur-en-r"><span class="header-section-number">D.1</span> Définition d’un vecteur en <code>R</code></h2>
+<p>Un vecteur en <code>R</code> est une collection ordonnée d’éléments de même type. Il peut s’agir de nombres, de caractères, de valeurs booléennes ou d’autres types de données.</p>
+<p>En d’autres termes, un vecteur est une liste d’éléments simples.</p>
+<p>Points clés à retenir&nbsp;:</p>
+<ul>
+<li>Tous les éléments d’un vecteur doivent être du même type.</li>
+<li>Les vecteurs sont indexés à partir de <span class="math inline">\(1\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+<li>Il existe plusieurs types de vecteurs atomiques en R :
+<ul>
+<li><code>integer</code> : nombres entiers</li>
+<li><code>double</code> : nombres réels</li>
+<li><code>complex</code> : nombres complexes</li>
+<li><code>character</code> : chaînes de caractères</li>
+<li><code>logical</code> : valeurs booléennes (<code>TRUE</code> ou <code>FALSE</code>)</li>
+</ul></li>
+<li>R peut effectuer des opérations mathématiques directement sur les vecteurs.</li>
+<li>Les opérations entre vecteurs se font élément par élément.</li>
+<li>Si les vecteurs intervenant dans une opération ne sont pas de même longueur, la règle de recyclage s’applique.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;beaucoup de languages de programmation commencent l’indexation à <span class="math inline">\(0\)</span></p></div></section>
+<section id="exemples-de-vecteurs" class="level2" data-number="D.2">
+<h2 data-number="D.2" class="anchored" data-anchor-id="exemples-de-vecteurs"><span class="header-section-number">D.2</span> Exemples de vecteurs :</h2>
+<p><code>c(1, 2, 3, 4)</code> : un vecteur numérique de longueur 4 <code>c("a", "b", "c")</code> : un vecteur de caractères de longueur 3 <code>c(TRUE, FALSE, TRUE)</code> : un vecteur logique de longueur 3</p>
 </section>
-<section id="petite-histoire-de-purrr" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="petite-histoire-de-purrr">Petite histoire de <code>purrr</code></h3>
-<p><code>purrr</code> fait partie du <a href="https://www.tidyverse.org/"><code>tidyverse</code></a>, créé par <a href="https://hadley.nz/">Hadley WICKHAM</a><span class="citation" data-cites="frwiki:hadley">(voir aussi <a href="references.html#ref-frwiki:hadley" role="doc-biblioref">Wikipédia 2024a</a>)</span>.</p>
-<div class="no-row-height column-margin column-container"><div id="ref-frwiki:hadley" class="csl-entry" role="listitem">
-Wikipédia. 2024a. <span>«&nbsp;Hadley Wickham — Wikipédia<span>,</span> l’encyclopédie libre&nbsp;»</span>. <a href="http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&amp;oldid=212491841">http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&amp;oldid=212491841</a>.
-</div></div></section>
-<section id="utilité" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="utilité">Utilité</h3>
-<div class="page-columns page-full"><blockquote class="blockquote">
-<p><code>purrr</code> est une extension du tidyverse qui fournit des outils pour travailler avec les vecteurs et les fonctions, et notamment pour itérer sur les éléments de vecteurs ou de listes en leur appliquant une fonction<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
-</blockquote><div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;copié/collé <a href="https://juba.github.io/tidyverse/18-purrr.html">d’ici</a></p></div></div>
-
-
-
+<section id="fonctions-utiles-pour-manipuler-les-vecteurs" class="level2" data-number="D.3">
+<h2 data-number="D.3" class="anchored" data-anchor-id="fonctions-utiles-pour-manipuler-les-vecteurs"><span class="header-section-number">D.3</span> Fonctions utiles pour manipuler les vecteurs :</h2>
+<p><code>c()</code>: pour créer un vecteur <code>length()</code>: pour obtenir la longueur d’un vecteur <code>head()</code>: pour afficher les premiers éléments d’un vecteur <code>tail()</code>: pour afficher les derniers éléments d’un vecteur <code>sort()</code>: pour trier un vecteur <code>which()</code>: pour trouver les indices des éléments qui satisfont une condition <code>replace()</code>: pour remplacer des éléments d’un vecteur</p>
 </section>
+<section id="pour-plus-dinformations" class="level2" data-number="D.4">
+<h2 data-number="D.4" class="anchored" data-anchor-id="pour-plus-dinformations"><span class="header-section-number">D.4</span> Pour plus d’informations :</h2>
+<ul>
+<li><a href="https://demandred.gitbooks.io/introduction-a-r-pour-les-chatons/content/les-bases-de-r/manipuler-des-nombres-via-les-expressions.html">Vecteurs et types atomiques · Introduction à R pour les chatons:</a></li>
+<li><a href="https://webusers.i3s.unice.fr/~malapert/R/pdf/10-vecteurs.pdf">Les séquences : vecteurs - Algo &amp; Prog avec R:</a></li>
+<li><a href="https://bookdown.org/ael/rexplor/chap2.html">Les vecteurs | Exploration de données avec R - Bookdown:</a></li>
+</ul>
+
+
 </section>
 
 
@@ -704,11 +725,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../Aides/chunk.html" class="pagination-link  aria-label=" &lt;span="" définition&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title"><code>chunk</code> définition</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./101-vecteurs-et-listes.html" class="pagination-link" aria-label="<span class='chapter-number'>1</span>&nbsp; <span class='chapter-title'>Vecteurs et listes</span>">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Vecteurs et listes</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

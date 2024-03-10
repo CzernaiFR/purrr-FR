@@ -1,0 +1,56 @@
+---
+date: 03-09-2024
+date-modified: last-modified
+date-format: "ddd D MMM YYYY"
+author:
+  - name: Roger MARTIN
+    email: Roger57que@free.fr
+  - name: Jenny BRYAN
+    url: https://jennybc.github.io/purrr-tutorial/index.html
+  - name: Gemini
+    url: https://gemini.google.com/app/9e7b45c9610306f3
+title: "Vecteurs en `R`"
+---
+
+## Définition d'un vecteur en `R`
+
+Un vecteur en `R` est une collection ordonnée d'éléments de même type. Il peut s'agir de nombres, de caractères, de valeurs booléennes ou d'autres types de données.
+
+En d'autres termes, un vecteur est une liste d'éléments simples.
+
+Points clés à retenir :
+
+- Tous les éléments d'un vecteur doivent être du même type.
+- Les vecteurs sont indexés à partir de $1$^[beaucoup de languages de programmation commencent l'indexation à $0$].
+- Il existe plusieurs types de vecteurs atomiques en R :
+  - `integer` : nombres entiers
+  - `double` : nombres réels
+  - `complex` : nombres complexes
+  - `character` : chaînes de caractères
+  - `logical` : valeurs booléennes (`TRUE` ou `FALSE`)
+
+- R peut effectuer des opérations mathématiques directement sur les vecteurs.
+- Les opérations entre vecteurs se font élément par élément.
+- Si les vecteurs intervenant dans une opération ne sont pas de même longueur, la règle de recyclage s'applique.
+
+## Exemples de vecteurs :
+
+`c(1, 2, 3, 4)` : un vecteur numérique de longueur 4
+`c("a", "b", "c")` : un vecteur de caractères de longueur 3
+`c(TRUE, FALSE, TRUE)` : un vecteur logique de longueur 3
+
+## Fonctions utiles pour manipuler les vecteurs :
+
+`c()`: pour créer un vecteur
+`length()`: pour obtenir la longueur d'un vecteur
+`head()`: pour afficher les premiers éléments d'un vecteur
+`tail()`: pour afficher les derniers éléments d'un vecteur
+`sort()`: pour trier un vecteur
+`which()`: pour trouver les indices des éléments qui satisfont une condition
+`replace()`: pour remplacer des éléments d'un vecteur
+
+## Pour plus d'informations :
+
+- [Vecteurs et types atomiques · Introduction à R pour les chatons:](https://demandred.gitbooks.io/introduction-a-r-pour-les-chatons/content/les-bases-de-r/manipuler-des-nombres-via-les-expressions.html)
+- [Les séquences : vecteurs - Algo & Prog avec R:](https://webusers.i3s.unice.fr/~malapert/R/pdf/10-vecteurs.pdf)
+- [Les vecteurs | Exploration de données avec R - Bookdown:](https://bookdown.org/ael/rexplor/chap2.html)

@@ -24,7 +24,7 @@
     "href": "101-vecteurs-et-listes.html",
     "title": "1  Vecteurs et listes",
     "section": "",
-    "text": "1.1 Vecteurs atomiques\nIl faut comprendre les listes comme une structure de données qui généralise les vecteurs atomiques. Il faut donc vraiment commencer par là.\nL’objet R de base est un vecteur atomique comme celui-ci :\n```{r}\nv_log &lt;- c(TRUE, FALSE, FALSE, TRUE)\nv_log\n```\n\n[1]  TRUE FALSE FALSE  TRUE\nD’autres vecteurs atomiques :\n```{r}\n# vecteur de 4 nombres entiers\n(v_int &lt;- 1:4)\n```\n\n[1] 1 2 3 4",
+    "text": "1.1 Vecteurs atomiques\nIl faut savoir que les listes sont des structures de données qui généralisent les vecteurs atomiques. Il faut donc vraiment commencer par là.\nL’objet R de base est un vecteur atomique comme celui-ci :\n```{r}\nv_log &lt;- c(TRUE, FALSE, FALSE, TRUE)\nv_log\n```\n\n[1]  TRUE FALSE FALSE  TRUE\nD’autres vecteurs atomiques :\n```{r}\n# vecteur de 4 nombres entiers\n(v_int &lt;- 1:4)\n```\n\n[1] 1 2 3 4\n```{r}\n# vecteur de 4 nombres rationnels\n(v_rat &lt;- 1:4 * 1.25)\n```\n\n[1] 1.25 2.50 3.75 5.00\n```{r}\n# vecteur de 4 caractères\n(v_car &lt;- letters[1:4])\n```\n\n[1] \"a\" \"b\" \"c\" \"d\"\nLes vecteurs atomiques sont homogènes. Chaque élément est du même type, et est un scalaire, c’est à dire « a une longueur un ». Les exemples ci-dessus couvrent les versions les plus courantes des vecteurs R (logique, entier, double, caractère), même si vous en rencontrerez éventuellement des plus exotiques.\nVous pouvez construire un vecteur « à la main » avec la c()fonction. Nous l’avons utilisé ci-dessus pour construire le vecteur logique. Tous les autres vecteurs sont apparus par d’autres moyens et cela est révélateur de la vie réelle : la plupart des vecteurs ne sont pas créés explicitement avec c(). Ils ont tendance à être créés avec un générateur, comme le 1:nraccourci, ou via la transformation d’un objet existant.\n« Indexer un vecteur » signifie adresser des éléments ou des atomes spécifiques, que ce soit pour la lecture ou l’écriture. Nous indexons un vecteur à l’aide de crochets, comme ceci : x[something]. Il existe plusieurs manières d’exprimer les éléments souhaités, c’est-à-dire qu’il existe plusieurs formes valables pour something :\nvecteur logique : conserver les éléments de xpour lesquels somethingc’est TRUEet supprimer ceux pour lesquels c’estFALSE\nv_char[c(FALSE, FALSE, TRUE, TRUE)] #&gt; [1] “c” “d” v_char[v_log] #&gt; [1] “a” “d” vecteur entier, tous positifs : les éléments spécifiés dans somethingsont conservés entiers négatifs, tous négatifs : les éléments spécifiés dans somethingsont supprimés\nv_doub[2:3] #&gt; [1] 2.4 3.6 v_char[-4] #&gt; [1] “a” “b” “c” vecteur de caractères : suppose qu’il xs’agit d’un vecteur nommé et que les éléments dont les noms sont spécifiés ne somethingsont pas affichés ici, car aucun de nos vecteurs n’est nommé\nDes exercices Que se passe-t-il lorsque vous demandez le zéro-ème élément de l’un de nos vecteurs ? Que se passe-t-il lorsque vous demandez un élément qui dépasse la fin du vecteur, c’est-à-dire x[k]lorsque la longueur de xest inférieure à k? Nous avons indexé un vecteur xavec un vecteur d’entiers positifs plus court que x. Que se passe-t-il si le vecteur d’indexation est plus long que x? Nous avons indexé xavec un vecteur logique de même longueur. Que se passe-t-il si le vecteur d’indexation est plus court que x? Faites les exercices et vous verrez qu’il est possible d’obtenir un vecteur atomique de longueur nulle et aussi d’obtenir des éléments qui le sont NA. Notez que, dans ces deux scénarios, le type de variable sous-jacent est conservé.\nv_int[0] #&gt; integer(0) typeof(v_int[0]) #&gt; [1] “integer” v_doub[100] #&gt; [1] NA typeof(v_doub[100]) #&gt; [1] “double” Oui, il existe différentes saveurs de NA!",
     "crumbs": [
       "Notions de base",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Vecteurs et listes</span>"
@@ -35,7 +35,7 @@
     "href": "101-vecteurs-et-listes.html#vecteurs-atomiques",
     "title": "1  Vecteurs et listes",
     "section": "",
-    "text": "Note\n\n\n\nR ne comprend QUE des vecteurs. Le code ci-dessus affecte à une variable appelée v_log un vecteur de \\(4\\) éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)",
+    "text": "Note\n\n\n\nR ne comprend QUE des vecteurs. Le code ci-dessus affecte à une variable appelée v_log un vecteur de \\(4\\) éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)(voir Wikipédia 2023)\nUn point sur les vecteurs.\n\n\n\nWikipédia. 2023. « Structure de données — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Structure_de_donn%C3%A9es&oldid=200590572.",
     "crumbs": [
       "Notions de base",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Vecteurs et listes</span>"
@@ -64,19 +64,25 @@
   {
     "objectID": "Aides/Aides.html",
     "href": "Aides/Aides.html",
-    "title": "Aides",
+    "title": "Annexe B — Aides",
     "section": "",
-    "text": "Cette partie contient des aides1 pour guider les personnes peu au fait de R et de RStudio.\n1 comme écrit en titre\n\n\n\n\n\nMise en garde\n\n\n\nTous les textes qui suivent ont été écrits par Gemini. (voir Wikipédia 2024)\n\n\n\n\n\nWikipédia. 2024. « Google Gemini — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Google_Gemini&oldid=213073437."
+    "text": "Cette partie contient des aides1 pour guider les personnes pas trop aguerries avec R et de RStudio.\n1 c’est déjà écrit ci-dessus\n\n\n\n\n\nAvertissement\n\n\n\nTous les textes de cette partie ont été écrits par Gemini. (voir Wikipédia 2024)\n\n\n\n\n\nWikipédia. 2024. « Google Gemini — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Google_Gemini&oldid=213073437.",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Aides</span>"
+    ]
   },
   {
     "objectID": "Aides/chunk.html",
     "href": "Aides/chunk.html",
-    "title": "4  Définition d’un chunk dans RStudio avec Quarto",
+    "title": "Annexe C — chunk définition",
     "section": "",
-    "text": "4.0.1 Structure d’un chunk\n```{r}\n# Code R\n```",
+    "text": "C.1 Structure d’un chunk\n```{r}\n# Code R\n```",
     "crumbs": [
+      "Annexes",
       "Aides",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Définition d'un chunk dans RStudio avec Quarto</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>`chunk` définition</span>"
     ]
   },
   {
@@ -104,12 +110,121 @@
   {
     "objectID": "Aides/chunk.html#ressources-supplémentaires",
     "href": "Aides/chunk.html#ressources-supplémentaires",
-    "title": "4  Définition d’un chunk dans RStudio avec Quarto",
-    "section": "4.1 Ressources supplémentaires",
-    "text": "4.1 Ressources supplémentaires\n\nhttps://quarto.org/: https://quarto.org/docs/computations/r.html\nhttps://quarto.org/docs/tools/rstudio.html: https://rstudio.com/products/quarto/\nhttps://quarto.org/docs/get-started/hello/rstudio.html: https://quarto.org/docs/get-started/quarto-rstudio.html",
+    "title": "Annexe C — chunk définition",
+    "section": "C.6 Ressources supplémentaires",
+    "text": "C.6 Ressources supplémentaires\n\nhttps://quarto.org/: https://quarto.org/docs/computations/r.html\nhttps://quarto.org/docs/tools/rstudio.html: https://rstudio.com/products/quarto/\nhttps://quarto.org/docs/get-started/hello/rstudio.html: https://quarto.org/docs/get-started/quarto-rstudio.html",
     "crumbs": [
+      "Annexes",
       "Aides",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Définition d'un chunk dans RStudio avec Quarto</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>`chunk` définition</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/chunk.html#éléments-clés",
+    "href": "Aides/chunk.html#éléments-clés",
+    "title": "Annexe C — chunk définition",
+    "section": "C.2 Éléments clés",
+    "text": "C.2 Éléments clés\n\nDébut et fin du chunk\n\ndélimités par trois tirets consécutifs (```) et le langage du chunk (r pour R).\n\nCode R\n\ninsérez votre code R entre les deux blocs de tirets.\n\nOptions du chunk\n\ndéfinies sur la ligne suivant le début du chunk, entre accolades (\\).",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>`chunk` définition</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/chunk.html#exemple-de-chunk",
+    "href": "Aides/chunk.html#exemple-de-chunk",
+    "title": "Annexe C — chunk définition",
+    "section": "C.3 Exemple de chunk",
+    "text": "C.3 Exemple de chunk\n\n```{r}\n# Charger la bibliothèque ggplot2\nlibrary(ggplot2)\n\n# Créer un graphique\nggplot(airquality, aes(Temp, Ozone)) +\n  geom_point() +\n  geom_smooth(method = \"loess\")\n```\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 37 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 37 rows containing missing values or values outside the scale range\n(`geom_point()`).",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>`chunk` définition</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/chunk.html#fonctionnalités-des-chunks",
+    "href": "Aides/chunk.html#fonctionnalités-des-chunks",
+    "title": "Annexe C — chunk définition",
+    "section": "C.4 Fonctionnalités des chunks",
+    "text": "C.4 Fonctionnalités des chunks\n\nExécution du code :\n\nCliquez sur le bouton “Run” dans la barre d’outils du chunk.\nUtilisez le raccourci clavier Ctrl + Enter.\n\nAffichage des résultats :\n\nGraphiques, tableaux, texte brut, etc.\nInsertion automatique dans le document final.\n\nOptions avancées :\n\nContrôler l’exécution du code, l’affichage des résultats, etc.\nPour plus d’informations, consultez la documentation Quarto (https://quarto.org/).",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>`chunk` définition</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/chunk.html#utilisations-des-chunks",
+    "href": "Aides/chunk.html#utilisations-des-chunks",
+    "title": "Annexe C — chunk définition",
+    "section": "C.5 Utilisations des chunks",
+    "text": "C.5 Utilisations des chunks\n\nAnalyser des données :\n\nCharger des données, les transformer et les visualiser.\nGénérer des statistiques et des modèles.\n\nCréer des rapports :\n\nIntégrer du code R et ses résultats dans un document.\nAutomatiser la génération de rapports.\n\nReproduire des analyses :\n\nGarantir la transparence et la reproductibilité des analyses.\nPartager facilement le code et les résultats.\n\n\n\n\n\n\n\n\nNote\n\n\n\nEn résumé, les chunks constituent un outil puissant pour combiner du code R et du texte dans des documents Quarto. Ils permettent d’exécuter du code R, d’intégrer ses résultats et de générer des documents dynamiques et interactifs.",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>`chunk` définition</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/vecteurs-en-R.html",
+    "href": "Aides/vecteurs-en-R.html",
+    "title": "Annexe D — Vecteurs en R",
+    "section": "",
+    "text": "D.1 Définition d’un vecteur en R\nUn vecteur en R est une collection ordonnée d’éléments de même type. Il peut s’agir de nombres, de caractères, de valeurs booléennes ou d’autres types de données.\nEn d’autres termes, un vecteur est une liste d’éléments simples.\nPoints clés à retenir :",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Vecteurs en `R`</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/vecteurs-en-R.html#définition-dun-vecteur-en-r",
+    "href": "Aides/vecteurs-en-R.html#définition-dun-vecteur-en-r",
+    "title": "Annexe D — Vecteurs en R",
+    "section": "",
+    "text": "Tous les éléments d’un vecteur doivent être du même type.\nLes vecteurs sont indexés à partir de \\(1\\)1.\nIl existe plusieurs types de vecteurs atomiques en R :\n\ninteger : nombres entiers\ndouble : nombres réels\ncomplex : nombres complexes\ncharacter : chaînes de caractères\nlogical : valeurs booléennes (TRUE ou FALSE)\n\nR peut effectuer des opérations mathématiques directement sur les vecteurs.\nLes opérations entre vecteurs se font élément par élément.\nSi les vecteurs intervenant dans une opération ne sont pas de même longueur, la règle de recyclage s’applique.\n\n1 beaucoup de languages de programmation commencent l’indexation à \\(0\\)",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Vecteurs en `R`</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/vecteurs-en-R.html#exemples-de-vecteurs",
+    "href": "Aides/vecteurs-en-R.html#exemples-de-vecteurs",
+    "title": "Annexe D — Vecteurs en R",
+    "section": "D.2 Exemples de vecteurs :",
+    "text": "D.2 Exemples de vecteurs :\nc(1, 2, 3, 4) : un vecteur numérique de longueur 4 c(\"a\", \"b\", \"c\") : un vecteur de caractères de longueur 3 c(TRUE, FALSE, TRUE) : un vecteur logique de longueur 3",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Vecteurs en `R`</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/vecteurs-en-R.html#pour-plus-dinformations",
+    "href": "Aides/vecteurs-en-R.html#pour-plus-dinformations",
+    "title": "Annexe D — Vecteurs en R",
+    "section": "D.4 Pour plus d’informations :",
+    "text": "D.4 Pour plus d’informations :\n\nVecteurs et types atomiques · Introduction à R pour les chatons:\nLes séquences : vecteurs - Algo & Prog avec R:\nLes vecteurs | Exploration de données avec R - Bookdown:",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Vecteurs en `R`</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/vecteurs-en-R.html#fonctions-utiles-pour-manipuler-les-vecteurs",
+    "href": "Aides/vecteurs-en-R.html#fonctions-utiles-pour-manipuler-les-vecteurs",
+    "title": "Annexe D — Vecteurs en R",
+    "section": "D.3 Fonctions utiles pour manipuler les vecteurs :",
+    "text": "D.3 Fonctions utiles pour manipuler les vecteurs :\nc(): pour créer un vecteur length(): pour obtenir la longueur d’un vecteur head(): pour afficher les premiers éléments d’un vecteur tail(): pour afficher les derniers éléments d’un vecteur sort(): pour trier un vecteur which(): pour trouver les indices des éléments qui satisfont une condition replace(): pour remplacer des éléments d’un vecteur",
+    "crumbs": [
+      "Annexes",
+      "Aides",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Vecteurs en `R`</span>"
     ]
   }
 ]

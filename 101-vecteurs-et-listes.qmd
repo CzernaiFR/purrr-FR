@@ -12,7 +12,7 @@ author:
 # Vecteurs et listes
 
 ## Vecteurs atomiques
-Il faut comprendre les listes comme une structure de données qui généralise les vecteurs atomiques. Il faut donc vraiment commencer par là.
+Il faut savoir que les listes sont des structures de données qui généralisent les vecteurs atomiques. Il faut donc vraiment commencer par là.
 
 L'objet `R` de base est un vecteur atomique comme celui-ci :
 
@@ -22,7 +22,9 @@ v_log
 ```
 
 ::: {.callout-note}
-`R` ne comprend ***QUE*** des vecteurs. Le code ci-dessus affecte à une variable appelée `v_log` un vecteur de $4$ éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)
+`R` ne comprend ***QUE*** des vecteurs. Le code ci-dessus affecte à une variable appelée `v_log` un vecteur de $4$ éléments logiques (leurs seules valeurs possibles sont VRAI ou FAUX)[voir @frwiki:vecteur]
+
+[Un point sur les vecteurs.](Aides/vecteurs-en-R.qmd)
 :::
 
 D'autres vecteurs atomiques :
@@ -30,6 +32,55 @@ D'autres vecteurs atomiques :
 # vecteur de 4 nombres entiers
 (v_int <- 1:4)
 ```
+```{r}
+# vecteur de 4 nombres rationnels
+(v_rat <- 1:4 * 1.25)
+```
+```{r}
+# vecteur de 4 caractères
+(v_car <- letters[1:4])
+```
+
+Les vecteurs atomiques sont homogènes. Chaque élément est du même type, et est un scalaire, c'est à dire « a une longueur un ». Les exemples ci-dessus couvrent les versions les plus courantes des vecteurs `R` (logique, entier, double, caractère), même si vous en rencontrerez éventuellement des plus exotiques.
+
+Vous pouvez construire un vecteur « à la main » avec la c()fonction. Nous l'avons utilisé ci-dessus pour construire le vecteur logique. Tous les autres vecteurs sont apparus par d'autres moyens et cela est révélateur de la vie réelle : la plupart des vecteurs ne sont pas créés explicitement avec c(). Ils ont tendance à être créés avec un générateur, comme le 1:nraccourci, ou via la transformation d'un objet existant.
+
+« Indexer un vecteur » signifie adresser des éléments ou des atomes spécifiques, que ce soit pour la lecture ou l'écriture. Nous indexons un vecteur à l’aide de crochets, comme ceci : x[something]. Il existe plusieurs manières d'exprimer les éléments souhaités, c'est-à-dire qu'il existe plusieurs formes valables pour something :
+
+vecteur logique : conserver les éléments de xpour lesquels somethingc'est TRUEet supprimer ceux pour lesquels c'estFALSE
+
+v_char[c(FALSE, FALSE, TRUE, TRUE)]
+#> [1] "c" "d"
+v_char[v_log]
+#> [1] "a" "d"
+vecteur entier, tous positifs : les éléments spécifiés dans somethingsont conservés
+entiers négatifs, tous négatifs : les éléments spécifiés dans somethingsont supprimés
+
+v_doub[2:3]
+#> [1] 2.4 3.6
+v_char[-4]
+#> [1] "a" "b" "c"
+vecteur de caractères : suppose qu'il xs'agit d'un vecteur nommé et que les éléments dont les noms sont spécifiés ne somethingsont pas affichés ici, car aucun de nos vecteurs n'est nommé
+
+Des exercices
+Que se passe-t-il lorsque vous demandez le zéro-ème élément de l'un de nos vecteurs ?
+Que se passe-t-il lorsque vous demandez un élément qui dépasse la fin du vecteur, c'est-à-dire x[k]lorsque la longueur de xest inférieure à k?
+Nous avons indexé un vecteur xavec un vecteur d'entiers positifs plus court que x. Que se passe-t-il si le vecteur d'indexation est plus long que x?
+Nous avons indexé xavec un vecteur logique de même longueur. Que se passe-t-il si le vecteur d'indexation est plus court que x?
+Faites les exercices et vous verrez qu'il est possible d'obtenir un vecteur atomique de longueur nulle et aussi d'obtenir des éléments qui le sont NA. Notez que, dans ces deux scénarios, le type de variable sous-jacent est conservé.
+
+v_int[0]
+#> integer(0)
+typeof(v_int[0])
+#> [1] "integer"
+v_doub[100]
+#> [1] NA
+typeof(v_doub[100])
+#> [1] "double"
+Oui, il existe différentes saveurs de NA!
+
+
+
 
 
 

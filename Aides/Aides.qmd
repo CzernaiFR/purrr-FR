@@ -1,0 +1,9 @@
+---
+title: "Aides"
+---
+
+Cette partie contient des aides^[c'est déjà écrit ci-dessus] pour guider les personnes pas trop aguerries avec `R` et de RStudio.
+
+::: {.callout-warning}
+Tous les textes de cette partie ont été écrits par Gemini. [voir @frwiki:gemini]
+:::
