@@ -10,37 +10,6 @@
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\nKnuth, Donald E. 1984. « Literate Programming ». Comput. J. 27 (2): 97‑111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "Annexe A — References",
-    "section": "",
-    "text": "Wikipedia contributors. 2023. “Jenny Bryan —\nWikipedia, the Free Encyclopedia.” https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&oldid=1186715571.\n\n\nWikipédia. 2024a. “Hadley Wickham — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&oldid=212491841.\n\n\n———. 2024b. “R (Langage) — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=213114905.",
-    "crumbs": [
-      "Annexes",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>References</span>"
-    ]
-  },
-  {
     "objectID": "index.html#à-propos-de-ce-document",
     "href": "index.html#à-propos-de-ce-document",
     "title": "purrr FR",
@@ -73,11 +42,24 @@
     ]
   },
   {
-    "objectID": "Aides/chunk.html",
-    "href": "Aides/chunk.html",
-    "title": "Définition d’un chunk dans RStudio avec Quarto",
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
     "section": "",
-    "text": "Un chunk, ou bloc de code, est une section de code R insérée dans un document Quarto. Il permet d’exécuter du code R et d’intégrer les résultats dans le document final.\nStructure d’un chunk:\n::: {.cell}\n\n````{.cell-code}\n```{r}\n# Code R\n:::\n```\n\n**Éléments clés:**\n\n* **Début et fin du chunk:** délimités par trois tirets consécutifs (`````) et le langage du chunk (`r` pour R).\n* **Code R:** insérez votre code R entre les deux blocs de tirets.\n* **Options du chunk:** définies sur la ligne suivant le début du chunk, entre accolades (`{ }`).\n\n**Exemple de chunk:**\n\n```\n\n::: {.cell}\n\n````{.cell-code}\n```{r}\n# Charger la bibliothèque ggplot2\nlibrary(ggplot2)\n\n# Créer un graphique\nggplot(airquality, aes(Temp, Ozone)) +\n  geom_point() +\n  geom_smooth(method = \"loess\")\n```\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 37 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 37 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n:::\n```\nFonctionnalités des chunks:\n\nExécution du code:\n\nCliquez sur le bouton “Run” dans la barre d’outils du chunk.\nUtilisez le raccourci clavier Ctrl + Enter.\n\nAffichage des résultats:\n\nGraphiques, tableaux, texte brut, etc.\nInsertion automatique dans le document final.\n\nOptions avancées:\n\nContrôler l’exécution du code, l’affichage des résultats, etc.\nPour plus d’informations, consultez la documentation Quarto (https://quarto.org/).\n\n\nUtilisations des chunks:\n\nAnalyser des données:\n\nCharger des données, les transformer et les visualiser.\nGénérer des statistiques et des modèles.\n\nCréer des rapports:\n\nIntégrer du code R et ses résultats dans un document.\nAutomatiser la génération de rapports.\n\nReproduire des analyses:\n\nGarantir la transparence et la reproductibilité des analyses.\nPartager facilement le code et les résultats.\n\n\nEn résumé, les chunks constituent un outil puissant pour combiner du code R et du texte dans des documents Quarto. Ils permettent d’exécuter du code R, d’intégrer ses résultats et de générer des documents dynamiques et interactifs.\nRessources supplémentaires:\n\nhttps://quarto.org/: https://quarto.org/docs/computations/r.html\nhttps://quarto.org/docs/tools/rstudio.html: https://rstudio.com/products/quarto/\nhttps://quarto.org/docs/get-started/hello/rstudio.html: https://quarto.org/docs/get-started/quarto-rstudio.html"
+    "text": "This is a book created from markdown and executable code.\nSee (knuth84?) for additional discussion of literate programming.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
   },
   {
     "objectID": "Aides/Aides.html",
@@ -85,5 +67,49 @@
     "title": "Aides",
     "section": "",
     "text": "Cette partie contient des aides1 pour guider les personnes peu au fait de R et de RStudio.\n1 comme écrit en titre\n\n\n\n\n\nMise en garde\n\n\n\nTous les textes qui suivent ont été écrits par Gemini. (voir Wikipédia 2024)\n\n\n\n\n\nWikipédia. 2024. « Google Gemini — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Google_Gemini&oldid=213073437."
+  },
+  {
+    "objectID": "Aides/chunk.html",
+    "href": "Aides/chunk.html",
+    "title": "4  Définition d’un chunk dans RStudio avec Quarto",
+    "section": "",
+    "text": "4.0.1 Structure d’un chunk\n```{r}\n# Code R\n```",
+    "crumbs": [
+      "Aides",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Définition d'un chunk dans RStudio avec Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Annexe A — References",
+    "section": "",
+    "text": "Wikipedia contributors. 2023. “Jenny Bryan —\nWikipedia, the Free Encyclopedia.” https://en.wikipedia.org/w/index.php?title=Jenny_Bryan&oldid=1186715571.\n\n\nWikipédia. 2024a. “Google Gemini — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Google_Gemini&oldid=213073437.\n\n\n———. 2024b. “Hadley Wickham — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Hadley_Wickham&oldid=212491841.\n\n\n———. 2024c. “R (Langage) — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=213114905.",
+    "crumbs": [
+      "Annexes",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "chunk.html",
+    "href": "chunk.html",
+    "title": "4  Définition d’un chunk dans RStudio avec Quarto",
+    "section": "",
+    "text": "Un chunk, ou bloc de code, est une section de code R insérée dans un document Quarto. Il permet d’exécuter du code R et d’intégrer les résultats dans le document final.\nStructure d’un chunk:\n::: {.cell}\n\n````{.cell-code}\n```{r}\n# Code R\n:::\n```\n\n**Éléments clés:**\n\n* **Début et fin du chunk:** délimités par trois tirets consécutifs (`````) et le langage du chunk (`r` pour R).\n* **Code R:** insérez votre code R entre les deux blocs de tirets.\n* **Options du chunk:** définies sur la ligne suivant le début du chunk, entre accolades (`{ }`).\n\n**Exemple de chunk:**\n\n```\n\n::: {.cell}\n\n````{.cell-code}\n```{r}\n# Charger la bibliothèque ggplot2\nlibrary(ggplot2)\n\n# Créer un graphique\nggplot(airquality, aes(Temp, Ozone)) +\n  geom_point() +\n  geom_smooth(method = \"loess\")\n```\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 37 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 37 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n:::\n```\nFonctionnalités des chunks:\n\nExécution du code:\n\nCliquez sur le bouton “Run” dans la barre d’outils du chunk.\nUtilisez le raccourci clavier Ctrl + Enter.\n\nAffichage des résultats:\n\nGraphiques, tableaux, texte brut, etc.\nInsertion automatique dans le document final.\n\nOptions avancées:\n\nContrôler l’exécution du code, l’affichage des résultats, etc.\nPour plus d’informations, consultez la documentation Quarto (https://quarto.org/).\n\n\nUtilisations des chunks:\n\nAnalyser des données:\n\nCharger des données, les transformer et les visualiser.\nGénérer des statistiques et des modèles.\n\nCréer des rapports:\n\nIntégrer du code R et ses résultats dans un document.\nAutomatiser la génération de rapports.\n\nReproduire des analyses:\n\nGarantir la transparence et la reproductibilité des analyses.\nPartager facilement le code et les résultats.\n\n\nEn résumé, les chunks constituent un outil puissant pour combiner du code R et du texte dans des documents Quarto. Ils permettent d’exécuter du code R, d’intégrer ses résultats et de générer des documents dynamiques et interactifs.\nRessources supplémentaires:\n\nhttps://quarto.org/: https://quarto.org/docs/computations/r.html\nhttps://quarto.org/docs/tools/rstudio.html: https://rstudio.com/products/quarto/\nhttps://quarto.org/docs/get-started/hello/rstudio.html: https://quarto.org/docs/get-started/quarto-rstudio.html",
+    "crumbs": [
+      "Aides",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Définition d'un chunk dans RStudio avec Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Aides/chunk.html#ressources-supplémentaires",
+    "href": "Aides/chunk.html#ressources-supplémentaires",
+    "title": "4  Définition d’un chunk dans RStudio avec Quarto",
+    "section": "4.1 Ressources supplémentaires",
+    "text": "4.1 Ressources supplémentaires\n\nhttps://quarto.org/: https://quarto.org/docs/computations/r.html\nhttps://quarto.org/docs/tools/rstudio.html: https://rstudio.com/products/quarto/\nhttps://quarto.org/docs/get-started/hello/rstudio.html: https://quarto.org/docs/get-started/quarto-rstudio.html",
+    "crumbs": [
+      "Aides",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Définition d'un chunk dans RStudio avec Quarto</span>"
+    ]
   }
 ]

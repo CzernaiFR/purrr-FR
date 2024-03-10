@@ -23,9 +23,9 @@ book:
         - 101-vecteurs-et-listes.qmd
     - intro.qmd
     - summary.qmd
-    - part: /Aides/Aides.qmd
+    - part: "Aides"
       chapters: 
-        - /Aides/chunk.qmd
+        - "Aides/chunk.qmd"
   appendices: 
     - references.qmd
     
@@ -47,7 +47,7 @@ execute:
 
 format:
   html:
-    theme: superhero
+    theme: cyborg
     fontsize: 1.2em
     highlight-style: vim-dark
     reference-location: margin
